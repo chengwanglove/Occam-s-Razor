@@ -6,4 +6,4 @@
 $ null fetch <url>
 ```
 
-![fetch](/null-cli/fetch.gif)
+![fetch](/Occam-s-Razor.github.io/fetch.gif)
