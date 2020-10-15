@@ -1,0 +1,62 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn --ignore-engines
+
+PATH: 
+  .:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin:/usr/local/mysql/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  12.16.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/mumu/Documents/learnspace/personalNotes/package.json: Unexpected token } in JSON at position 704
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:304:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "奥卡姆剃刀's world",
+    "version": "1.0.4",
+    "description": "front end",
+    "main": "index.js",
+    "scripts": {
+      "docs:dev": "vuepress dev docs",
+      "docs:build": "vuepress build docs",
+      "deploy": "gh-pages -d docs/dist"
+    },
+    "pre-commit": [
+      "lint",
+      "test"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/chengwanglove/Occam-s-Razor.git"
+    },
+    "keywords": [],
+    "author": "null",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/chengwanglove/Occam-s-Razor.gitissues"
+    },
+    "homepage": "https://github.com/chengwanglove/Occam-s-Razor#readme",
+    "devDependencies": {
+      "vuepress": "^1.2.0"
+    },
+    "engines": {
+      "node": ">=8.9"
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

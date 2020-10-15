@@ -1,0 +1,23 @@
+
+# OSX
+.DS_Store
+
+# IDE
+.idea
+
+# npm
+node_modules
+yarn.lock
+package-lock.json
+
+# jest
+coverage
+
+#doc
+CONTRIBUTING.md
+docs
+
+#other
+.travis.yml
+karma.sauce.conf.js
+.github
