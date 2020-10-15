@@ -1,6 +1,5 @@
 module.exports = {
-  base: '/null-cli/',
-  dest: 'docs/dist',
+  base: '/',
   port: 3333,
   serviceWorker: true,
   locales: {
@@ -27,7 +26,7 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    repo: 'webfansplz/null-cli',
+    repo: 'chengwanglove/Occam-s-Razor.github.io',
     editLinks: true,
     docsDir: 'docs',
     locales: {
