@@ -52,11 +52,6 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
-          title: '使用指南',
-          collapsable: false,
-          children: ['install', 'introduce', 'use'],
-        },
-        {
           title: '命令',
           collapsable: false,
           children: [
