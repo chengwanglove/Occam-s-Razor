@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/',
+  base: '/Occam-s-Razor.github.io/',
   port: 3333,
   serviceWorker: true,
   locales: {
