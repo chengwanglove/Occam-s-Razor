@@ -85,7 +85,8 @@ module.exports = {
           children: [
             'chrome/devtools',
             'chrome/core',
-            'chrome/jsExecution'
+            'chrome/jsExecution',
+            // 'chrome/stack'
           ],
         },
         // {
