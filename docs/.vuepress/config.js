@@ -70,7 +70,6 @@ module.exports = {
             'node/querystring',
             'node/stream',
             'node/url',
-            'node/buffer',
             'node/childProcess',
           ],
         },
