@@ -61,7 +61,7 @@ module.exports = {
       '/server/': [
         {
           title: 'node基础知识',
-          collapsable: true,
+          collapsable: false,
           children: [
             'node/path2',
             'node/buffer',
@@ -84,6 +84,8 @@ module.exports = {
           collapsable: false,
           children: [
             'chrome/devtools',
+            'chrome/core',
+            'chrome/jsExecution'
           ],
         },
         // {
