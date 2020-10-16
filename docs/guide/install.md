@@ -1,13 +1,3 @@
-# 安装
+# 前端知识
 
-**NPM**
-
-```shell
-$ npm install null-cli -g
-```
-
-**YARN**
-
-```shell
-$ yarn global add null-cli
-```
+[浏览器结构与工作原理](./chrome/devtools.md)

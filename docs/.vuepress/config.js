@@ -79,16 +79,16 @@ module.exports = {
           title: '浏览器结构与工作原理',
           collapsable: false,
           children: [
-            'search',
-          ],
-        },
-        {
-          title: '调试技巧',
-          collapsable: false,
-          children: [
             'chrome/devtools',
           ],
         },
+        // {
+        //   title: '调试技巧',
+        //   collapsable: false,
+        //   children: [
+        //     'chrome/devtools',
+        //   ],
+        // },
       ],
     },
   },
