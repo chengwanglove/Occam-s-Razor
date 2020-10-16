@@ -47,6 +47,10 @@ module.exports = {
             link: '/guide/install.html'
           },
           {
+            text: '计算机基础',
+            link: '/computerScience/install.html'
+          },
+          {
             text: '服务端知识',
             link: '/server/install.html'
           }
