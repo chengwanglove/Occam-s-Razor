@@ -6,7 +6,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: "奥卡姆剃刀's world",
-      description: 'A command makes you more efficient',
+      description: ' Always believe something beautiful is going to happen',
     },
   },
   head: [
@@ -42,15 +42,47 @@ module.exports = {
           },
         },
         nav: [
-          // {
-          //   text: '文档',
-          //   link: '/API/install.html'
-          // }
+          {
+            text: '前端知识',
+            link: '/guide/install.html'
+          },
+          {
+            text: '服务端知识',
+            link: '/server/install.html'
+          }
         ],
       },
     },
     sidebar: {
+      '/server/': [
+        {
+          title: 'node基础知识',
+          collapsable: true,
+          children: [
+            'node/path2',
+            'node/buffer',
+            'node/dns',
+            'node/events',
+            'node/fs',
+            'node/http',
+            'node/path',
+            'node/process',
+            'node/querystring',
+            'node/stream',
+            'node/url',
+            'node/buffer',
+            'node/childProcess',
+          ],
+        },
+      ],
       '/guide/': [
+        {
+          title: '浏览器结构与工作原理',
+          collapsable: false,
+          children: [
+            'search',
+          ],
+        },
         {
           title: '命令',
           collapsable: false,

@@ -21,6 +21,6 @@ git add -A
 git commit -m 'deploy'
 
 git push -f git@github.com:chengwanglove/Occam-s-Razor.github.io.git master
-echo '子仓库更新-------'
+echo '子仓库更新-------\n\n'
 
 cd -
