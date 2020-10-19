@@ -81,7 +81,7 @@ module.exports = {
       '/guide/': [
         {
           title: '浏览器结构与工作原理',
-          collapsable: false,
+          collapsable: true,
           children: [
             'chrome/devtools',
             'chrome/core',
@@ -92,13 +92,14 @@ module.exports = {
           ],
           
         },
-        // {
-        //   title: '调试技巧',
-        //   collapsable: false,
-        //   children: [
-        //     'chrome/devtools',
-        //   ],
-        // },
+        {
+          title: 'javaScript',
+          collapsable: true,
+          children: [
+            'javascript/basic',
+            // 'javascript/call',
+          ],
+        },
       ],
       '/computerScience/': [
         {
