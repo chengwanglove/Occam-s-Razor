@@ -114,4 +114,41 @@ const isAnagram = function (s, t) {
 
 * 复杂度分析:时间复杂度: O(n)  空间复杂度: O(1)
 
-## 字符串转整数
+## 报数
+
+* 报数序列是一个整数序列，按照其中的整数的顺序进行报数，得到下一个数  输入:4， 输出: "1211"
+
+1
+11
+21
+1211
+111221
+
+```
+方法一: 递归
+const constcountAndSay = function(n) {
+    if (n == 1) {
+        return '1';
+    }
+    const preResult = constcountAndSay(n - 1);
+    return preResult.replace(/(\d)\1*/g, item => `${item.length}${item[0]}`);
+}
+
+方法二:循环
+
+const constcountAndSay = function(n) {
+    if (n == 1) {
+        return '1';
+    }
+    let j = 1;
+    let preResult = '';
+    while(n > j) {
+        if (j == 1) {
+            preResult = '1';
+        }
+        ++j;
+        preResult = preResult.replace(/(\d)\1*/g, item => `${item.length}${item[0]}`);
+    }
+    return preResult;
+}
+```

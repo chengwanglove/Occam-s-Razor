@@ -59,25 +59,50 @@
 //     return sArr.join('') == sArr.join('');
 // }
 
-const isAnagram = function (s, t) {
-    if (s.length != t.length) {
-        return false;
+// const isAnagram = function (s, t) {
+//     if (s.length != t.length) {
+//         return false;
+//     }
+//     const hashK = {}
+//     for(k of s) {
+//         if (hashK[k]) {
+//             hashK[k] = hashK[k] + 1;
+//         } else {
+//             hashK[k] = 1;
+//         }
+//     }
+//     for(kt of t) {
+//         if (hashK[kt]) {
+//             hashK[kt] = hashK[kt] - 1;
+//         } else {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// const constcountAndSay = function(n) {
+//     if (n == 1) {
+//         return '1';
+//     }
+//     const preResult = constcountAndSay(n - 1);
+//     return preResult.replace(/(\d)\1*/g, item => `${item.length}${item[0]}`);
+// }
+
+const constcountAndSay = function(n) {
+    if (n == 1) {
+        return '1';
     }
-    const hashK = {}
-    for(k of s) {
-        if (hashK[k]) {
-            hashK[k] = hashK[k] + 1;
-        } else {
-            hashK[k] = 1;
+    let j = 1;
+    let preResult = '';
+    while(n > j) {
+        if (j == 1) {
+            preResult = '1';
         }
+        ++j;
+        preResult = preResult.replace(/(\d)\1*/g, item => `${item.length}${item[0]}`);
     }
-    for(kt of t) {
-        if (hashK[kt]) {
-            hashK[kt] = hashK[kt] - 1;
-        } else {
-            return false;
-        }
-    }
-    return true;
+    return preResult;
 }
-console.log(isAnagram('ganaram', 'nagaram'));
+console.log(constcountAndSay(4));
+
