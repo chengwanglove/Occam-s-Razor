@@ -90,6 +90,7 @@ module.exports = {
             'chrome/page',
             // 'chrome/stack'
           ],
+          
         },
         // {
         //   title: '调试技巧',
@@ -98,6 +99,17 @@ module.exports = {
         //     'chrome/devtools',
         //   ],
         // },
+      ],
+      '/computerScience/': [
+        {
+          title: '数据结构与算法',
+          collapsable: false,
+          children: [
+            'dataStructure/complexity',
+            'dataStructure/str',
+            'dataStructure/linklist',
+          ],
+        },
       ],
     },
   },
