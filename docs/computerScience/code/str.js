@@ -147,23 +147,84 @@
 // console.log(isPalindrome('A man, a plan, a canal Panama'));
 
 
-const strStr = function (haystack, needle) {
-    const hayLen = hayLen.length;
-    const needLen = needLen.length;
-    if (hayLen < needLen) {
-        return -1;
-    } else if (hayLen == needLen) {
-        return haystack === needle ? 0 : -1;
-    } else {
-        for(let i = 0; i <= hayLen - needLen; i ++) {
-            if (haystack[i] != needLen[i]) {
-                continue;
-            } else {
-                if (haystack.subString(i, i + needLen) === needle) {
-                    return i;
-                }
-            }
-        }
+// const strStr = function (haystack, needle) {
+//     const hayLen = hayLen.length;
+//     const needLen = needLen.length;
+//     if (hayLen < needLen) {
+//         return -1;
+//     } else if (hayLen == needLen) {
+//         return haystack === needle ? 0 : -1;
+//     } else {
+//         for(let i = 0; i <= hayLen - needLen; i ++) {
+//             if (haystack[i] != needLen[i]) {
+//                 continue;
+//             } else {
+//                 if (haystack.subString(i, i + needLen) === needle) {
+//                     return i;
+//                 }
+//             }
+//         }
+//     }
+//     return -1;
+// }
+
+
+// function getCommonPrefix(a, b) {
+//     let j = 0;
+//     while(j < a.length && j < b.length && a[j] == b[j]) {
+//         j++;
+//     }
+//     return j > 0 ? a.subString(0, j) : '';
+// }
+// function longestCommonPrefix(strs) {
+//     for(let i = 1; i < strs.length; i ++) {
+//         let commonPrefix = strs[0];
+//         commonPrefix = getCommonPrefix(commonPrefix, strs[i]);
+//     }
+//     return commonPrefix;
+// }
+
+// function longestCommonPrefix(strs) {
+//     let i = 0;
+//     let flag = true;
+//     while(flag) {
+//         let firstCommon = strs[0];
+//         if (i < firstCommon.length) {
+//             for(let j = 1; j < strs.length; j++) {
+//                 if (firstCommon[i] != strs[j][i] || i > strs[i].length) {
+//                     flag = false;
+//                     break;
+//                 }
+//             }
+//         } else {
+//             flag = false;
+//         };
+//         i++;
+//     }
+//     return strs[0].substring(0, i -1);
+// }
+
+// 找到最大的回文字符串 暴力法解决
+const isPalindrome = function(e) {
+    const str = e.toLocaleLowerCase().replace(/[^\da-zA-Z]/g, '');
+    const reverseStr = str.split('').reverse().join('');
+    if(str === reverseStr) {
+        return true;
     }
-    return -1;
+    return false;
+}
+
+function longestPalindrome(str) {
+    let num = 0;
+    let j = 0;
+    const minNumStrLen = 3;
+    while(str.length - num >= minNumStrLen) {
+        for(j ;j < str.length; j ++) {
+            if (isPalindrome(str.subString(j, j + str.length - num ))) {
+                break;
+            };
+        }
+        num ++;
+    }
+    return str.subString(j, j + str.length - num);
 }

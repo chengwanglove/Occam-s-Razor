@@ -254,3 +254,44 @@ const strStr = function (haystack, needle) {
 
 * 编写一个函数来查找字符串数组中的最长公共前缀。如果不存在公共前缀，返回空字符串 ""  输入: ["flower","flow","flight"]1输出: "fl"
 
+```
+方法一: 获取最大公共前缀
+function getCommonPrefix(a, b) {
+    let j = 0;
+    while(j < a.length && j < b.length && a[j] == b[j]) {
+        j++;
+    }
+    return j > 0 ? a.subString(0, j) : '';
+}
+function longestCommonPrefix(strs) {
+    for(let i = 1; i < strs.length; i ++) {
+        let commonPrefix = strs[0];
+        commonPrefix = getCommonPrefix(commonPrefix, strs[i]);
+    }
+    return commonPrefix;
+}
+
+方法二:
+
+function longestCommonPrefix(strs) {
+    let i = 0;
+    let flag = true;
+    while(flag) {
+        let firstCommon = strs[0];
+        if (i < firstCommon.length) {
+            for(let j = 1; j < strs.length; j++) {
+                if (firstCommon[i] !== strs[j][i] || i > strs[i].length) {
+                    flag = false;
+                    break;
+                }
+            }
+        } else {
+            flag = false;
+        };
+        i++;
+    }
+    return strs[0].substring(0, i -1);
+}
+```
+
+## 最大回文字符串
