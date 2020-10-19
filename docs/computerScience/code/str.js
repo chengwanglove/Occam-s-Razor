@@ -89,20 +89,20 @@
 //     return preResult.replace(/(\d)\1*/g, item => `${item.length}${item[0]}`);
 // }
 
-const constcountAndSay = function(n) {
-    if (n == 1) {
-        return '1';
-    }
-    let j = 1;
-    let preResult = '';
-    while(n > j) {
-        if (j == 1) {
-            preResult = '1';
-        }
-        ++j;
-        preResult = preResult.replace(/(\d)\1*/g, item => `${item.length}${item[0]}`);
-    }
-    return preResult;
-}
-console.log(constcountAndSay(4));
+// const constcountAndSay = function(n) {
+//     if (n == 1) {
+//         return '1';
+//     }
+//     let j = 1;
+//     let preResult = '';
+//     while(n > j) {
+//         if (j == 1) {
+//             preResult = '1';
+//         }
+//         ++j;
+//         preResult = preResult.replace(/(\d)\1*/g, item => `${item.length}${item[0]}`);
+//     }
+//     return preResult;
+// }
+// console.log(constcountAndSay(4));
 
