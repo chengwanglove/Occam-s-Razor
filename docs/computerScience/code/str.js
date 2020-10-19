@@ -106,3 +106,64 @@
 // }
 // console.log(constcountAndSay(4));
 
+// 输入：["h","e","l","l","o"]1输出：["o","l","l","e","h"]
+
+// const constreverseString = function(s) {
+//     for(let i = 0; i < s.length / 2; i++) {
+//         console.log(s.length - i - 1)
+//         let temp = s[s.length - i - 1];
+//         s[s.length - i - 1] = s[i];
+//         s[i] = temp;
+//     }
+//     return s;
+// }
+
+// console.log(constreverseString(["h","e","l","l","o"]));
+
+// const firstUniqChar = function(str) {
+//    let sHash = {}
+//    for(let i = 0; i < str.length; i++) {
+//        if (sHash[str[i]]) {
+//            sHash[str[i]] = sHash[str[i]] + 1;
+//        } else {
+//          sHash[str[i]] = 1;
+//        } 
+//    }
+//    let sHashArr = Object.keys(sHash).filter((item) => sHash[item] === 1);
+//    return sHashArr.length ? str.indexOf(sHashArr[0]) : -1;
+// }
+
+// console.log(firstUniqChar('loveleetcode'));
+
+// const isPalindrome = function(e) {
+//     const str = e.toLocaleLowerCase().replace(/[^\da-zA-Z]/g, '');
+//     const reverseStr = str.split('').reverse().join('');
+//     if(str === reverseStr) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// console.log(isPalindrome('A man, a plan, a canal Panama'));
+
+
+const strStr = function (haystack, needle) {
+    const hayLen = hayLen.length;
+    const needLen = needLen.length;
+    if (hayLen < needLen) {
+        return -1;
+    } else if (hayLen == needLen) {
+        return haystack === needle ? 0 : -1;
+    } else {
+        for(let i = 0; i <= hayLen - needLen; i ++) {
+            if (haystack[i] != needLen[i]) {
+                continue;
+            } else {
+                if (haystack.subString(i, i + needLen) === needle) {
+                    return i;
+                }
+            }
+        }
+    }
+    return -1;
+}

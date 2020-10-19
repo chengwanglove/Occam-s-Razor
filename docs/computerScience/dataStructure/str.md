@@ -159,3 +159,98 @@ const constcountAndSay = function(n) {
 
 * 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。 不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间
 
+
+```
+const constreverseString = function(s) {
+    for(let i = 0; i < s.length / 2; i++) {
+        console.log(s.length - i - 1)
+        let temp = s[s.length - i - 1];
+        s[s.length - i - 1] = s[i];
+        s[i] = temp;
+    }
+    return s;
+}
+
+时间复杂O(n) 空间复杂度O(1)
+```
+
+## 字符串中唯一字符
+
+* 给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。
+
+```
+方法一:
+const firstUniqChar = function(str) {
+   for(let i = 0; i < str.length; i++) {
+       if (str.lastIndexOf(str[i]) == str.indexOf(str[i])) {
+           return i;
+       }
+   }
+   return -1;
+}
+时间复杂度O(n^2) 空间复杂度O(1)
+
+方法二: 哈希
+
+
+const firstUniqChar = function(str) {
+   let sHash = {}
+   for(let i = 0; i < str.length; i++) {
+       if (sHash[str[i]]) {
+           sHash[str[i]] = sHash[str[i]] + 1;
+       } else {
+         sHash[str[i]] = 1;
+       } 
+   }
+   let sHashArr = Object.keys(sHash).filter((item) => sHash[item] === 1);
+   return sHashArr.length ? str.indexOf(sHashArr[0]) : -1;
+}
+```
+
+## 验证回文字符串
+
+* 给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。说明：本题中，我们将空字符串定义为有效的回文串  输入: "A man, a plan, a canal: Panama"1输出: true2示例 2:输入: "race a car"1输出: false2
+
+```
+const isPalindrome = function(e) {
+    const str = e.toLocaleLowerCase().replace(/[^\da-zA-Z]/g, '');
+    const reverseStr = str.split('').reverse().join('');
+    if(str === reverseStr) {
+        return true;
+    }
+    return false;
+}
+```
+
+## 实现strStr()
+
+* 给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回 -1。 给定 haystack = 'hello world', needle = 'll'12返回23
+
+```
+const strStr = function (haystack, needle) {
+    const hayLen = hayLen.length;
+    const needLen = needLen.length;
+    if (hayLen < needLen) {
+        return -1;
+    } else if (hayLen == needLen) {
+        return haystack === needle ? 0 : -1;
+    } else {
+        for(let i = 0; i <= hayLen - needLen; i ++) {
+            if (haystack[i] != needLen[i]) {
+                continue;
+            } else {
+                if (haystack.subString(i, i + needLen) === needle) {
+                    return i;
+                }
+            }
+        }
+    }
+    return -1;
+}
+
+```
+
+## 最长公共前缀
+
+* 编写一个函数来查找字符串数组中的最长公共前缀。如果不存在公共前缀，返回空字符串 ""  输入: ["flower","flow","flight"]1输出: "fl"
+
