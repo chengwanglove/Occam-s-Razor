@@ -86,6 +86,7 @@ module.exports = {
             'chrome/devtools',
             'chrome/core',
             'chrome/jsExecution',
+            'chrome/v8',
             // 'chrome/stack'
           ],
         },
