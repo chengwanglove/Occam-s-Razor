@@ -96,3 +96,85 @@ function bar() {    console.log('bar')}function foo() {    setTimeout(bar, 0);  
 
 * Promise 实现了回调函数的延时绑定
 * 需要将回调函数 onResolve 的返回值穿透到最外层
+
+```
+function isFunction(func) {
+    if (typeof func == 'function') {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * pending Fulfilled Rejected 有限状态机 
+ */
+class myPromise {
+    static pending = 'pending'
+    static resolved = 'resolved'
+    static rejected = 'rejected'
+    constructor(handle) {
+        if (!isFunction(handle)) {
+            throw new Error('accept a function as a parameter');
+        }
+        this.status = myPromise.pending;
+        setTimeout(() => {
+            handle(this._resolve.bind(this), this._reject.bind(this));
+        }, 0);
+        this.value = undefined;
+        this.reason = undefined;
+        this.callbacks = [];
+    }
+    _resolve(value) {
+        if (this.status !== myPromise.pending) return;
+        this.status = myPromise.resolved;
+        this.value = value;
+        this.callbacks.forEach((cb) => this._handler(cb))
+    }
+
+    _reject(err) {
+        if (this.status !== myPromise.pending) return;
+        this.status = myPromise.rejected;
+    }
+
+    _handler(callback) {
+        const {onFulfilled, onRejected, nextResolve, nextReject} = callback;
+        if (this.status === myPromise.pending) {
+            this.callbacks.push(callback);
+            return;
+        }
+        if (this.status == myPromise.resolved) {
+            const nextValue = onFulfilled ? onFulfilled(this.value) : undefined;
+            nextResolve(nextValue);
+            return;
+        }
+        if (this.status == myPromise.rejected) {
+            const nextReason = onRejected ? onRejected(this.reason) : undefined;
+            nextReject(nextReason);
+        }
+    }
+    then(onFulfilled, onRejected) {
+        return new myPromise((nextResolve, nextReject) => {
+            this._handler({
+                nextResolve,
+                nextReject,
+                onFulfilled,
+                onRejected
+            });
+        })
+    }
+}
+
+let p1 = new myPromise((resolve, reject) => {
+    // setTimeout(() => {
+    //     resolve(100)
+    // }, 100)
+    resolve(100)
+});
+
+p1.then((res) => {
+    console.log(res);
+    return res + 10
+}).then((res1) => {
+    console.log(res1);
+})
+```
