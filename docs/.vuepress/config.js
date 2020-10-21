@@ -63,6 +63,7 @@ module.exports = {
           title: 'node基础知识',
           collapsable: false,
           children: [
+            'node/intro',
             'node/path2',
             'node/buffer',
             'node/dns',
@@ -97,7 +98,9 @@ module.exports = {
           collapsable: true,
           children: [
             'javascript/basic',
-            // 'javascript/call',
+            'javascript/call',
+            'javascript/new',
+            'javascript/bind',
           ],
         },
       ],
