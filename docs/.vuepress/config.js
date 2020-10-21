@@ -111,6 +111,7 @@ module.exports = {
           children: [
             'dataStructure/complexity',
             'dataStructure/str',
+            'dataStructure/math',
             'dataStructure/linklist',
           ],
         },
