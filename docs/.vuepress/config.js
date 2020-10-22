@@ -61,7 +61,7 @@ module.exports = {
       '/server/': [
         {
           title: 'node基础知识',
-          collapsable: false,
+          collapsable: true,
           children: [
             'node/intro',
             'node/path2',
@@ -76,6 +76,13 @@ module.exports = {
             'node/stream',
             'node/url',
             'node/childProcess',
+          ],
+        },
+        {
+          title: 'egg',
+          collapsable: true,
+          children: [
+            'egg/basic',
           ],
         },
       ],
