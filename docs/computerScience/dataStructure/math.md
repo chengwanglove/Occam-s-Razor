@@ -103,3 +103,72 @@ const titleToNumber = function(s){
     }
 return sum; };
 ```
+
+## 快乐数
+
+* 对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，然后 重复这个过程直到这个数变为 1，也可能是无限循环但始终变不到 1。如果可以变为 1，那么这个 数就是快乐数。
+
+```
+ /**
+ * 
+ * @param {number} num 
+ * @description 是否是个快乐数
+ */
+const fn = function(num, once) {
+    if (once[num]) {
+        return false;
+    }
+    const list = num.toString().split('');
+    let result = 0;
+    list.forEach((item) => {
+        result += Math.pow(parseInt(item, 10), 2);
+    });
+    if (result == 1) {
+        return true;
+    } else {
+        fn(num, once);
+    }
+}
+
+const isHappy = (num) => {
+    const once = {};
+    return fn(num, once)
+}
+```
+
+## 阶乘后是0
+
+* 给定一个整数 n，返回 n! 结果尾数中零的数量。
+
+```
+方法一: 暴力法 算出阶乘 得到末尾0
+方法二：分解多少5的倍数
+
+function zeroNum(n) {
+    let j = 0;
+    for(let i = 1; i <= n; i ++) {
+        let num = i;
+        let a = i % 5;
+        if (a == 0) {
+            while(num % 5 == 0 && num != 0) {
+                j ++;
+                num = num % 5;
+            }
+        }
+    }
+    return j;
+}
+
+function zeroNum(num) {
+    let count = 0;
+    while(num > 0) {
+        num = parseInt(num / 5);
+        count += num;
+    }
+    return count;
+}
+```
+
+## 实现 pow(x, n)
+
+* 即计算 x 的 n 次幂函数
