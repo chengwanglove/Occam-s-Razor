@@ -60,15 +60,68 @@
 // }
 
 
-function zeroNum(n) {
-    let j = 0;
-    for(let i = 1; i <= n; i ++) {
-        let a = i % 5;
-        if (a == 0) {
-            j ++;
+// function zeroNum(n) {
+//     let j = 0;
+//     for(let i = 1; i <= n; i ++) {
+//         let a = i % 5;
+//         if (a == 0) {
+//             j ++;
+//         }
+//     }
+//     return j;
+// }
+
+// console.log(zeroNum(10))
+
+// function myPow(x, n) {
+//     if (n == 0) {
+//         return 1;
+//     }
+//     const base = n > 0 ? x : 1 / x;
+//     let result = 1;
+//     for(let i = 1; i <= Math.abs(n); i ++) {
+//         result = x * result;
+//     }
+//     return result;
+// }
+
+// function myPow(x, n) {
+//     if (n == 0) {
+//         return 1;
+//     } else if (n == 1) {
+//         return x;
+//     } else if (n == -1) {
+//         return 1 / x;
+//     }
+
+//     const base = n > 0 ? x : 1/ x;
+//     const half = parseInt(n / 2, 10);
+//     const result = myPow(x, half);
+//     if (n % 2 != 0) {
+//         return base * result * result
+//     }
+//     return result * result;
+// }
+
+function mySqrt(n) {
+    let max = n;
+    let min = 0;
+    let flag = true;
+    let middle;
+    while(flag) {
+        middle = Math.round((max - min) / 2 + min);
+        if (middle * middle > n) {
+            max = middle;
+        } else if (middle * middle < n) {
+            if ((middle + 1) * (middle + 1) > n) {
+                flag = false;
+            }
+            min = middle;
+        } else {
+            return middle;
         }
     }
-    return j;
+    return middle;
 }
 
-console.log(zeroNum(10))
+console.log(mySqrt(7));

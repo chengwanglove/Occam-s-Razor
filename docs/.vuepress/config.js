@@ -119,6 +119,7 @@ module.exports = {
             'dataStructure/complexity',
             'dataStructure/str',
             'dataStructure/math',
+            'dataStructure/array',
             'dataStructure/linklist',
           ],
         },

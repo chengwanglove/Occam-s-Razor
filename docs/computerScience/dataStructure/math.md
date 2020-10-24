@@ -172,3 +172,75 @@ function zeroNum(num) {
 ## 实现 pow(x, n)
 
 * 即计算 x 的 n 次幂函数
+
+```
+暴力法:
+function myPow(x, n) {
+    if (n == 0) {
+        return 1;
+    }
+    const base = n > 0 ? x : 1 / x;
+    let result = 1;
+    for(let i = 1; i <= Math.abs(n); i ++) {
+        result = x * result;
+    }
+    return result;
+}
+
+二分法：
+
+function myPow(x, n) {
+    if (n == 0) {
+        return 1;
+    } else if (n == 1) {
+        return x;
+    } else if (n == -1) {
+        return 1 / x;
+    }
+
+    const base = n > 0 ? x : 1/ x;
+    const half = parseInt(n / 2, 10);
+    const result = myPow(x, half);
+    if (n % 2 != 0) {
+        return base * result * result
+    }
+    return result * result;
+}
+```
+
+## x的平方根
+
+```
+// 顺序暴力法
+const mySqrt= function(x) {
+    for (let i = 1; i <= x; i++) {
+        if(i * i > x) {
+            return (i - 1);
+        }else if(i * i == x) {
+            return i;
+        }
+    }
+    return 0;
+}
+// 二分查找法
+function mySqrt(n) {
+    let max = n;
+    let min = 0;
+    let flag = true;
+    let middle;
+    while(flag) {
+        middle = Math.round((max - min) / 2 + min);
+        if (middle * middle > n) {
+            max = middle;
+        } else if (middle * middle < n) {
+            if ((middle + 1) * (middle + 1) > n) {
+                flag = false;
+            }
+            min = middle;
+        } else {
+            return middle;
+        }
+    }
+    return middle;
+}
+```
