@@ -101,6 +101,15 @@ module.exports = {
           
         },
         {
+          title: 'webpack知识学习',
+          collapsable: true,
+          children: [
+            'webpack/basic',
+            'webpack/advanced',
+          ],
+          
+        },
+        {
           title: 'javaScript',
           collapsable: true,
           children: [
