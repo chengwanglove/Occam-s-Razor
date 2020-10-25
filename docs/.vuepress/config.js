@@ -106,6 +106,7 @@ module.exports = {
           children: [
             'webpack/basic',
             'webpack/advanced',
+            'webpack/configuration',
           ],
           
         },
