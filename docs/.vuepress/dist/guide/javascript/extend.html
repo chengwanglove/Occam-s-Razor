@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>奥卡姆剃刀&#39;s world</title>
+    <title>jq的extend | 奥卡姆剃刀&#39;s world</title>
     <meta name="generator" content="VuePress 1.7.0">
     <link rel="icon" href="/Occam-s-Razor.github.io/la-m.png">
     <meta name="description" content=" Always believe something beautiful is going to happen">
     <meta name="theme-color" content="#3eaf7c">
     
-    <link rel="preload" href="/Occam-s-Razor.github.io/assets/css/0.styles.322e602c.css" as="style"><link rel="preload" href="/Occam-s-Razor.github.io/assets/js/app.695c6931.js" as="script"><link rel="preload" href="/Occam-s-Razor.github.io/assets/js/2.d3739a79.js" as="script"><link rel="preload" href="/Occam-s-Razor.github.io/assets/js/25.56753dd1.js" as="script"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/10.2a420325.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/11.6ed1cd87.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/12.7cd8dfb7.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/13.2fd326f2.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/14.3939ad36.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/15.8233e288.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/16.4fb7109e.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/17.67fb9720.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/18.7ee9b25c.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/19.af906529.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/20.de476a84.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/21.c48b6929.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/22.b577c1f7.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/23.a4f0f313.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/24.69efbdd9.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/26.212cece6.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/27.32560cf8.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/28.f0eed681.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/29.de0a3b37.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/3.3eedf5f9.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/30.98cc0edb.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/31.c83a8392.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/32.52581c9d.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/33.a473e6a2.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/34.661d46e3.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/35.bcae1d81.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/36.97ba2ae9.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/37.23dee6c1.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/38.e8bdf456.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/39.66da8b7a.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/4.d1b1528e.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/40.94b0caa8.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/41.863fc028.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/42.a16a37d8.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/43.32e61dc2.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/44.8cfa305f.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/45.a012adc7.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/46.2df79dc8.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/47.f9d054df.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/48.45dc592c.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/5.e9d295c5.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/6.b5fea630.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/7.f5bf767c.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/8.9170b5bc.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/9.9ed9da47.js">
+    <link rel="preload" href="/Occam-s-Razor.github.io/assets/css/0.styles.322e602c.css" as="style"><link rel="preload" href="/Occam-s-Razor.github.io/assets/js/app.6b666a7b.js" as="script"><link rel="preload" href="/Occam-s-Razor.github.io/assets/js/2.d3739a79.js" as="script"><link rel="preload" href="/Occam-s-Razor.github.io/assets/js/26.be99ed71.js" as="script"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/10.a8e46e7f.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/11.70860ed6.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/12.5b58c423.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/13.2fd326f2.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/14.5758bde6.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/15.859a4b16.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/16.4fb7109e.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/17.32c92eac.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/18.a95eb3ed.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/19.bb4c866c.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/20.de476a84.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/21.4a84e323.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/22.b577c1f7.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/23.bf9b2722.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/24.bbb2ca0b.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/25.545cabbd.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/27.f08176ae.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/28.232ac491.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/29.5d2dc8d4.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/3.4eab974e.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/30.e9e01e56.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/31.77c32ee5.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/32.8756bd08.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/33.72e3f4ee.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/34.70ad87fc.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/35.a4a712fc.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/36.53489c4c.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/37.b2164c68.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/38.05d84fea.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/39.a7f7bb21.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/4.d1b1528e.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/40.0998680d.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/41.c42b2605.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/42.2f8bd4fa.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/43.e051f505.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/44.792d1cd8.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/45.842e3012.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/46.c9d14fd7.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/47.39a14fc6.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/48.494a238f.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/49.80989dd0.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/5.e9d295c5.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/50.f63103fc.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/51.cfc94cac.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/52.99c33733.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/6.b5fea630.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/7.b92eda18.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/8.fefa0db2.js"><link rel="prefetch" href="/Occam-s-Razor.github.io/assets/js/9.e41eedd0.js">
     <link rel="stylesheet" href="/Occam-s-Razor.github.io/assets/css/0.styles.322e602c.css">
   </head>
   <body>
@@ -29,7 +29,93 @@
   服务端知识
 </a></div> <a href="https://github.com/chengwanglove/Occam-s-Razor.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
     GitHub
-    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>浏览器结构与工作原理</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Occam-s-Razor.github.io/guide/chrome/devtools.html" class="sidebar-link">浏览器调试技巧</a></li><li><a href="/Occam-s-Razor.github.io/guide/chrome/core.html" class="sidebar-link">宏观视角下的浏览器</a></li><li><a href="/Occam-s-Razor.github.io/guide/chrome/jsExecution.html" class="sidebar-link">javascript执行机制</a></li><li><a href="/Occam-s-Razor.github.io/guide/chrome/v8.html" class="sidebar-link">v8原理</a></li><li><a href="/Occam-s-Razor.github.io/guide/chrome/page.html" class="sidebar-link">浏览器中的页面循环系统</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack知识学习</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端全链路性能优化</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/chengwanglove/Occam-s-Razor.github.io/edit/master/docs/guide/javascript/extend.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-10-21 21:20:07</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/Occam-s-Razor.github.io/assets/js/app.695c6931.js" defer></script><script src="/Occam-s-Razor.github.io/assets/js/2.d3739a79.js" defer></script><script src="/Occam-s-Razor.github.io/assets/js/25.56753dd1.js" defer></script>
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>浏览器结构与工作原理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack知识学习</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>javaScript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Occam-s-Razor.github.io/guide/javascript/basic.html" class="sidebar-link">javascript基础</a></li><li><a href="/Occam-s-Razor.github.io/guide/javascript/call.html" class="sidebar-link">call and apply</a></li><li><a href="/Occam-s-Razor.github.io/guide/javascript/new.html" class="sidebar-link">JavaScript深入之new的模拟实现</a></li><li><a href="/Occam-s-Razor.github.io/guide/javascript/bind.html" class="sidebar-link">bind</a></li><li><a href="/Occam-s-Razor.github.io/guide/javascript/repeat.html" class="sidebar-link">JavaScript之数组去重</a></li><li><a href="/Occam-s-Razor.github.io/guide/javascript/type.html" class="sidebar-link">JavaScript之类型判断</a></li><li><a href="/Occam-s-Razor.github.io/guide/javascript/copy.html" class="sidebar-link">拷贝</a></li><li><a href="/Occam-s-Razor.github.io/guide/javascript/extend.html" aria-current="page" class="active sidebar-link">jq的extend</a></li><li><a href="/Occam-s-Razor.github.io/guide/javascript/typeCon.html" class="sidebar-link">js类型转换</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端全链路性能优化</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jq的extend"><a href="#jq的extend" class="header-anchor">#</a> jq的extend</h1> <ul><li>当两个对象出现相同字段的时候，后者会覆盖前者，而不会进行深层次的覆盖</li></ul> <div class="language- extra-class"><pre class="language-text"><code>方法一: 浅拷贝
+function extend() {
+    var length = arguments.length;
+    var target = arguments[0];
+
+    for(i = 1; i &gt; length; i ++ ) {
+        let options = arguments[i];
+        for (let key in options) {
+            if (target[key] != undefined) {
+                target[key] = options[key]
+            }
+        }
+    }
+    return target;
+}
+
+方法二: 
+function extend() {
+  // 默认不进行深拷贝
+  var deep = false;
+  var name, options, src, copy, clone, copyIsArray;
+  var length = arguments.length;
+  // 记录要复制的对象的下标
+  var i = 1;
+  // 第一个参数不传布尔值的情况下，target 默认是第一个参数
+  var target = arguments[0] || {};
+  // 如果第一个参数是布尔值，第二个参数是 target
+  if (typeof target == &quot;boolean&quot;) {
+    deep = target;
+    target = arguments[i] || {};
+    i++;
+  }
+  // 如果target不是对象，我们是无法进行复制的，所以设为 {}
+  if (typeof target !== &quot;object&quot; &amp;&amp; !isFunction(target)) {
+    target = {};
+  }
+
+  // 循环遍历要复制的对象们
+  for (; i &lt; length; i++) {
+    // 获取当前对象
+    options = arguments[i];
+    // 要求不能为空 避免 extend(a,,b) 这种情况
+    if (options != null) {
+      for (name in options) {
+        // 目标属性值
+        src = target[name];
+        // 要复制的对象的属性值
+        copy = options[name];
+
+        // 解决循环引用
+        if (target === copy) {
+          continue;
+        }
+
+        // 要递归的对象必须是 plainObject 或者数组
+        if (
+          deep &amp;&amp;
+          copy &amp;&amp;
+          (isPlainObject(copy) || (copyIsArray = Array.isArray(copy)))
+        ) {
+          // 要复制的对象属性值类型需要与目标属性值相同
+          if (copyIsArray) {
+            copyIsArray = false;
+            clone = src &amp;&amp; Array.isArray(src) ? src : [];
+          } else {
+            clone = src &amp;&amp; isPlainObject(src) ? src : {};
+          }
+
+          target[name] = extend(deep, clone, copy);
+        } else if (copy !== undefined) {
+          target[name] = copy;
+        }
+      }
+    }
+  }
+
+  return target;
+}
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/chengwanglove/Occam-s-Razor.github.io/edit/master/docs/guide/javascript/extend.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-10-21 21:20:07</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Occam-s-Razor.github.io/guide/javascript/copy.html" class="prev">
+        拷贝
+      </a></span> <span class="next"><a href="/Occam-s-Razor.github.io/guide/javascript/typeCon.html">
+        js类型转换
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Occam-s-Razor.github.io/assets/js/app.6b666a7b.js" defer></script><script src="/Occam-s-Razor.github.io/assets/js/2.d3739a79.js" defer></script><script src="/Occam-s-Razor.github.io/assets/js/26.be99ed71.js" defer></script>
   </body>
 </html>

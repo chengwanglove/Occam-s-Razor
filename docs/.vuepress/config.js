@@ -118,6 +118,11 @@ module.exports = {
             'javascript/call',
             'javascript/new',
             'javascript/bind',
+            'javascript/repeat',
+            'javascript/type',
+            'javascript/copy',
+            'javascript/extend',
+            'javascript/typeCon',
           ],
         },
         {
