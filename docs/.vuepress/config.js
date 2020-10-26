@@ -120,6 +120,13 @@ module.exports = {
             'javascript/bind',
           ],
         },
+        {
+          title: '前端全链路性能优化',
+          collapsable: true,
+          children: [
+            'perfect/basic',
+          ],
+        },
       ],
       '/computerScience/': [
         {

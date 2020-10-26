@@ -5,3 +5,5 @@
 * [javaScirpt](./chrome/basic.md)
 
 * [webpack](./webpack/basic.md)
+
+* [前端全链路性能优化](./perfect/basic.md)
