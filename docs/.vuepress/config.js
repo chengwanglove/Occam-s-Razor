@@ -96,6 +96,7 @@ module.exports = {
             'chrome/jsExecution',
             'chrome/v8',
             'chrome/page',
+            'chrome/pageProgress',
             // 'chrome/stack'
           ],
           
