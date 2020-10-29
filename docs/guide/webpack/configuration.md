@@ -1,5 +1,14 @@
-# 编写可维护webpack的配置
+# webpack构建速度和体积优化策略
 
-* 通过配置文件管理
-* 构建包抽离出公共的npm包
+* 使用webpack内置的stats 颗粒度太粗，看不出问题所在
+
+## 速度分析
+
+* speed-measure-webpack-plugin 速度分析
+
+* webpack-bundle-analyzer 体积分析
+
+* 使用高版本的webpack和Node.js
+
+* 多进程/多实例构建
 
