@@ -146,3 +146,145 @@ const moveZeroes = function (nums) {
 ## 两个数组的交集
 
 - 给定两个数组，计算数组交集。输出结果中每个元素出现的次数，应与元素在两个数组中出现的次数一致。我们可以不考虑输出结果的顺序
+
+```
+方法一:
+const intersect = function (nums1, nums2) {
+  const hashObject = {};
+  for (let i = 0; i < nums1.length; i++) {
+    if (hashObject[nums1[i]]) {
+      hashObject[nums1[i]] += 1;
+    } else {
+      hashObject[nums1[i]] = 1;
+    }
+  }
+  const result = [];
+  for (let j = 0; j < nums2.length; j++) {
+    if (hashObject[nums2[j]]) {
+      result.push(nums2[j]);
+      hashObject[nums2[j]] -= 1;
+    }
+  }
+  return result;
+};
+
+方法二:
+const intersect = function (nums1, nums2) {
+  const longerArr = nums1.length > nums2.length ? nums1 : nums2;
+  const shorterArr = nums1.length > nums2.length ? nums2 : nums1;
+  const result = [];
+  for (let i = 0; i < shorterArr.length; i++) {
+    if (longerArr.indexOf(shorterArr[i]) > -1) {
+      result.push(shorterArr[i]);
+      longerArr.splice(longerArr.indexOf(shorterArr[i]), 1);
+    }
+  }
+  return result;
+};
+```
+
+## 一周中的第几天
+
+- 给你一个日期，请你设计一个算法来判断它是对应一周中的哪一天 输入为三个整数：day、month 和 year，分别表示日、月、年。您返回的结果必须是这几个值中的一个 {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"}。说明：给出的日期一定是在 1971 到 2100 年之间的有效日期。
+
+```
+const dayOfTheWeek = function (day, month, year) {
+  const date = new Date(Date.parse(`${year}/${month}/${day}`));
+  const Week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  return Week[date.getDay()];
+};
+```
+
+## 字谜分组
+
+- 给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串
+
+```
+输入: ["eat", "tea", "tan", "ate", "nat", "bat"],
+输出:
+[
+  ["ate","eat","tea"],
+  ["nat","tan"],
+  ["bat"]
+]
+
+方法一:
+const groupAnagrams = function (strs) {
+  const obj = {};
+  const arr = [];
+  // 遍历数组
+  for (let i = 0; i < strs.length; i++) {
+    // 将每个字母异位词进行排序，并将排序后的字符串作为 key
+    const unit = Array.from(strs[i]).sort().join('');
+    // 将 key 值一样的字母异位词置于同一个数组中
+    if (!obj[unit]) {
+      obj[unit] = [];
+    }
+    obj[unit].push(strs[i]);
+  }
+  for (const i in obj) {
+    arr.push(obj[i]);
+  }
+  return arr;
+};
+```
+
+## 三数之和
+
+- 给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组
+
+```
+例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]，
+
+满足要求的三元组集合为：
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+
+const threeSum = function (nums) {
+  const res = [];
+  nums.sort((a, b) => a - b);
+  const length = nums.length;
+
+  for (let i = 0; i < length; i++) {
+    let left = i + 1;
+    let right = length - 1;
+    while (left < right) {
+      const sum = nums[i] + nums[left] + nums[right];
+      if (sum === 0) {
+        res.push([nums[i], nums[left], nums[right]]);
+
+        const leftValue = nums[left];
+
+        // 这两步是为了去重
+        while (left < length && nums[left] === leftValue) {
+          left++;
+        }
+        const rightValue = nums[right];
+        while (right > left && nums[right] === rightValue) {
+          right--;
+        }
+      } else if (sum < 0) {
+        // 小于 0 说明太小了，需要向右移动
+        left++;
+      } else {
+        // 太大了，把右边的指针向左移动
+        right--;
+      }
+    }
+    while (i + 1 < nums.length && nums[i] === nums[i + 1]) {
+      i++;
+    }
+  }
+  return res;
+};
+```
+
+## 无重复字符的最长子串
+
+给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度
+
+## 递增的三元子序列
+
+- 给定一个未排序的数组，判断这个数组中是否存在长度为 3 的递增子序列
