@@ -137,13 +137,20 @@ module.exports = {
       '/computerScience/': [
         {
           title: '数据结构与算法',
-          collapsable: false,
+          collapsable: true,
           children: [
             'dataStructure/complexity',
             'dataStructure/str',
             'dataStructure/math',
             'dataStructure/array',
             'dataStructure/linklist',
+          ],
+        },
+        {
+          title: '网络协议',
+          collapsable: true,
+          children: [
+            'netWork/http',
           ],
         },
       ],
