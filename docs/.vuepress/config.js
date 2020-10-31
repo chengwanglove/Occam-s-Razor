@@ -150,7 +150,8 @@ module.exports = {
           title: '网络协议',
           collapsable: true,
           children: [
-            'netWork/http',
+            'netWork/all',
+            'netWork/macToIp',
           ],
         },
       ],
