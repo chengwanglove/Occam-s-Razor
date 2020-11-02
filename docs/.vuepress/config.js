@@ -152,6 +152,7 @@ module.exports = {
           children: [
             'netWork/all',
             'netWork/macToIp',
+            'netWork/transfer',
           ],
         },
       ],
