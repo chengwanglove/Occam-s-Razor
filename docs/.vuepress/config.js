@@ -112,6 +112,14 @@ module.exports = {
           
         },
         {
+          title: '需要弥补的知识点',
+          collapsable: true,
+          children: [
+            'webpack/todo',
+          ],
+          
+        },
+        {
           title: 'javaScript',
           collapsable: true,
           children: [
@@ -143,6 +151,7 @@ module.exports = {
             'dataStructure/str',
             'dataStructure/math',
             'dataStructure/array',
+            'dataStructure/stack',
             'dataStructure/linklist',
           ],
         },
