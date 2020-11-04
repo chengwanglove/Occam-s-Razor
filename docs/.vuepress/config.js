@@ -97,7 +97,7 @@ module.exports = {
             'chrome/v8',
             'chrome/page',
             'chrome/pageProgress',
-            // 'chrome/stack'
+            'chrome/client',
           ],
           
         },
@@ -162,6 +162,8 @@ module.exports = {
             'netWork/all',
             'netWork/macToIp',
             'netWork/transfer',
+            'netWork/use',
+            'netWork/dataCenter',
           ],
         },
       ],
