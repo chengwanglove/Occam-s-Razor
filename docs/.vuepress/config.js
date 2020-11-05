@@ -60,7 +60,7 @@ module.exports = {
     sidebar: {
       '/server/': [
         {
-          title: 'node基础知识',
+          title: 'node基础知识(done)',
           collapsable: true,
           children: [
             'node/intro',
@@ -79,7 +79,7 @@ module.exports = {
           ],
         },
         {
-          title: 'egg',
+          title: 'egg(done)',
           collapsable: true,
           children: [
             'egg/basic',
@@ -88,7 +88,7 @@ module.exports = {
       ],
       '/guide/': [
         {
-          title: '浏览器结构与工作原理',
+          title: '浏览器结构与工作原理(done)',
           collapsable: true,
           children: [
             'chrome/devtools',
@@ -156,7 +156,7 @@ module.exports = {
           ],
         },
         {
-          title: '网络协议',
+          title: '网络协议（done）',
           collapsable: true,
           children: [
             'netWork/all',
