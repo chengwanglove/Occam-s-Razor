@@ -6,5 +6,7 @@
 
 [网络协议](./netWork/http.md)
 
+[架构课读书笔记](./architecture/guide.md)
+
  <!-- [网络结构]
  [操作系统] -->

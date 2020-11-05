@@ -166,6 +166,13 @@ module.exports = {
             'netWork/dataCenter',
           ],
         },
+        {
+          title: '架构课读书笔记',
+          collapsable: true,
+          children: [
+            'architecture/guide',
+          ],
+        },
       ],
     },
   },
