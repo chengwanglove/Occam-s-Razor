@@ -135,6 +135,15 @@ module.exports = {
           ],
         },
         {
+          title: 'es6',
+          collapsable: true,
+          children: [
+            'es6/basic',
+            'es6/string',
+            'es6/number',
+          ],
+        },
+        {
           title: '前端全链路性能优化',
           collapsable: true,
           children: [
