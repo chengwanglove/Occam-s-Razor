@@ -88,6 +88,14 @@ module.exports = {
       ],
       '/guide/': [
         {
+          title: '前端进阶理论学习',
+          collapsable: false,
+          children: [
+            'advanced/basic',
+            'advanced/cli'
+          ],
+        },
+        {
           title: '浏览器结构与工作原理(done)',
           collapsable: true,
           children: [
